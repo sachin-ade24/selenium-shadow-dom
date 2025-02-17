@@ -14,7 +14,7 @@ public class ShadowDom {
 		WebDriver driver =  new ChromeDriver();
 		driver.manage().window().maximize();
 		driver.get("https://selectorshub.com/iframe-in-shadow-dom/");
-		Thread.sleep(10000);
+		Thread.sleep(25000);
 		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(5));
 		
 		//Handling Shadow-DOM
@@ -22,7 +22,7 @@ public class ShadowDom {
 		JavascriptExecutor js = (JavascriptExecutor)driver;
 		WebElement pizzaName = (WebElement)js.executeScript(jsPath);
 		pizzaName.sendKeys("Margherita pizza");
-		Thread.sleep(1000);
+		Thread.sleep(5000);
 		driver.quit();
 	}
 
